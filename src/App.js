@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Characters from './components/Routes/Characters/Characters';
+import Locations from './components/Routes/Locations/Locations';
+import Episodes from './components/Routes/Episodes/Episodes';
+import SingleEpisode from './components/Routes/SingleCards/SingleEpisode';
+import SingleCharacter from './components/Routes/SingleCards/SingleCharacter';
+import Welcome from './components/Welcome';
+import ErrorComponent from './components/Error';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/episodes" element={<Episodes />} />
+
+        <Route path="/episode/:id" element={<SingleEpisode />} />
+        <Route path="/character/:id" element={<SingleCharacter />} />
+        <Route path="*" element={<ErrorComponent />} />
+      </Routes>
     </div>
   );
 }

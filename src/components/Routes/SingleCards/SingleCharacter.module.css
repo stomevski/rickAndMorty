@@ -1,0 +1,22 @@
+.episodes_container {
+    width: 25%;
+
+    
+}
+
+
+@media (max-width: 1800px) {
+    .episodes_container{
+        width: 40%;
+    }
+    
+}
+
+
+@media (max-width: 1200px) {
+    .episodes_container{
+        width: 70%;
+    }
+    
+}
+

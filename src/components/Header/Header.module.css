@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.img {
+    width: 13%;
+}
+
+
+.nameAndLogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_text{
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+}
+
+header{
+    background: #34BE82;
+    padding-bottom: 1%;
+}
+
+
+nav a{
+    text-decoration: none;
+    padding: 2% 3%;
+    font-size: 2.2rem;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+    transition: background 0.3s, color 1s;
+}
+
+a:hover {
+    border-radius: 20px;
+    background: #F2F013;
+    color: #34BE82;
+}
+
+
+.active {
+    border-bottom: 5px solid #F2F013;
+}
